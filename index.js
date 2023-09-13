@@ -50,13 +50,17 @@
 // Punto 1
 // Las pizzas que tengan un id impar.
 
-const pizzaImpar = pizzas.filter(imp =>{
-    return imp.id %2 ===1
-})
 
-const nombrePizzaImpar = pizzaImpar.map(pizza => pizza.nombre)
+const pizzaImpar = (pizzasArray) => {
+  pizzasArray.forEach((pizza) => { if (pizza.id%2 ===1) {
+  
+    return  console.log(`La ${pizza.nombre} tiene el id ${pizza.id} y es impar.`)
+  }   
+  });
+  }
+  pizzaImpar(pizzas)
 
-console.log("Los nombres de las pizzas impares son: " + nombrePizzaImpar.join(", "))
+
 
 
 // Punto 2
